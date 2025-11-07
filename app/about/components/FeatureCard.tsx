@@ -2,12 +2,14 @@ import { FaCopy , FaGlobeAmericas, FaFlag } from "react-icons/fa";
 
 type Props = {
     title : string,
-    icon: string
-    children : string
+    icon: string,
+    children : string,
+    border? : boolean
 }
 
-export default function FeatureCard({title, icon, children}:Props){
-    const wrapper = `flex flex-col gap-2`
+export default function FeatureCard({title, icon, border, children}:Props){
+    const wrapper = `flex flex-col gap-2 
+                     ${border ? "sm:border-r sm:border-neutral-400 sm:pr-4" : ""}`
     const div = `flex items-center gap-1`
     const h3 = `font-bold text-lg`
     const iconsStyle = `h-5 w-5`

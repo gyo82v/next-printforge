@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "./components/Header";
 import "./globals.css";
 import {Albert_Sans, Montserrat_Alternates } from "next/font/google"
+import type { RootLayoutProps } from "@/types";
 
 export const metadata: Metadata = {
   title: "Printforge",
@@ -21,11 +22,7 @@ const montserratAlternates = Montserrat_Alternates({
 })
 
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}:RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`flex flex-col min-h-screen ${albertSans.className} ${montserratAlternates.variable}`}>

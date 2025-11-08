@@ -1,5 +1,5 @@
 import Image from "next/image"
-import hero from "./images/hero.png"
+import hero from "@/public/hero-image-square.png"
 import FeatureCard from "./components/FeatureCard"
 
 export default function About(){
@@ -22,8 +22,8 @@ export default function About(){
                 <section className={section1}>
                     <Image
                         src={hero}
-                        width={401}
-                        height={401}
+                        width={724}
+                        height={724}
                         className={heroImg}
                         alt="logo"
                      />

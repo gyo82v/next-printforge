@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroRound from "./images/hero-round.png"
+import heroRound from "@/public/hero-image.png"
 
 export default function Home() {
   const main = `flex-1 flex flex-col sm:justify-center text-neutral-700 sm:px-10`

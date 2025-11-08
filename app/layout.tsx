@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import "./globals.css";
 import {Albert_Sans, Montserrat_Alternates } from "next/font/google"
 import type { RootLayoutProps } from "@/types";

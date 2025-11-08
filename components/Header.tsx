@@ -19,7 +19,7 @@ export default function Header(){
                 />
             </Link>
             <nav className="flex gap-8">
-                <Link href="/" className={link}>3D MODELS</Link>
+                <Link href="3d-models" className={link}>3D MODELS</Link>
                 <Link href="about" className={link}>ABOUT</Link>
             </nav>
         </header>

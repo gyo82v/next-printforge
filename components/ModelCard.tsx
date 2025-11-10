@@ -1,4 +1,5 @@
 import { FaRegHeart } from "react-icons/fa"
+import type { ModelCardProps } from "@/types"
 import type { Model } from "@/types"
 import Link from "next/link"
 import Image from "next/image"
@@ -9,7 +10,7 @@ type Props = {
     data : Model
 }
 
-export default function Modelcard({data}:Props){
+export default function Modelcard({data}:ModelCardProps){
     const wrapper = ` rounded-lg shadow-lg sm:max-w-80 
                       transition-transform transition-colors transition-shadow duration-300 ease-in-out
                       hover:scale-105 active:scale-95 hover:shadow-xl hover:opacity-80`
@@ -22,7 +23,7 @@ export default function Modelcard({data}:Props){
 
     return(
         <article className={wrapper}>
-            <Link href="/">
+            <Link href={`/3d-models/${data.id}`}>
               <Image src={hero} width={724} height={724} className={imgStyle} alt="logo" />
               <section className={section}>
                   <h1 className={h1}>{data.name}</h1>

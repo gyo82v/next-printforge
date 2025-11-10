@@ -1,14 +1,9 @@
 import { FaRegHeart } from "react-icons/fa"
 import type { ModelCardProps } from "@/types"
-import type { Model } from "@/types"
 import Link from "next/link"
 import Image from "next/image"
 import hero from "@/public/hero-image-square.png"
 import Pill from "./Pill"
-
-type Props = {
-    data : Model
-}
 
 export default function Modelcard({data}:ModelCardProps){
     const wrapper = ` rounded-lg shadow-lg sm:max-w-80 

@@ -26,3 +26,12 @@ export type PillProps = {
 export type ModelCardProps = {
   data: Model
 }
+
+export type Category = {
+  displayName: string,
+  slug: string
+}
+
+export type CategoriesData = {
+  categories: Category[]
+}

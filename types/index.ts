@@ -18,6 +18,10 @@ export type ModelDetailPageProps = {
   params: Promise<{id : string}>
 }
 
+export type CategoryPageProps = {
+  params: Promise<{categoryName : string}>
+}
+
 export type PillProps = {
   children: ReactNode,
   className?: string
@@ -35,3 +39,4 @@ export type Category = {
 export type CategoriesData = {
   categories: Category[]
 }
+

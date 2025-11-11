@@ -10,7 +10,7 @@ type Props = {
 export default function CategoriesLayout({children}:Props){
     const categories:Category[] = getAllCategories()
     return(
-        <div className="flex flex-col sm:flex-row sm:items-center sm:my-auto">
+        <div className="flex flex-col sm:flex-row sm:my-auto">
             <CategoriesNavbar categories={categories} />
             {children}
         </div>

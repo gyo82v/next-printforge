@@ -1,9 +1,15 @@
+"use client"
+
 import Link from "next/link"
 import logoIcon from "@/public/printforge-logo-icon.svg"
 import logo from "@/public/printforge-logo.svg"
+import { usePathname } from "next/navigation"
 
 export default function Header(){
-    const link = `font-bold text-neutral-500 text-sm`
+    const pathname = usePathname()
+    const link = `font-bold text-neutral-500 text-sm 
+                  transition-transform transition-colors duration-300 ease-in-out
+                  hover:scale-105 active:scale-95 hover:text-orange-400 `
     return(
         <header className="flex justify-between items-center p-4 sm:px-10">
             <Link href="/">
@@ -19,8 +25,18 @@ export default function Header(){
                 />
             </Link>
             <nav className="flex gap-8">
-                <Link href="/3d-models" className={link}>3D MODELS</Link>
-                <Link href="/about" className={link}>ABOUT</Link>
+                <Link 
+                  href="/3d-models" 
+                  className={`${link} ${pathname.startsWith("/3d-models") ? "text-orange-400" : "text-neutral-500"}`}
+                >
+                    3D MODELS
+                </Link>
+                <Link 
+                  href="/about" 
+                  className={`${link} ${pathname === "/about" ? "text-orange-400" : "text-neutral-500"}`}
+                >
+                    ABOUT
+                </Link>
             </nav>
         </header>
     )
